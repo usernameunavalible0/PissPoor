@@ -5,6 +5,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
+
 public final class ClubHouse extends JavaPlugin {
 
     @Override
@@ -30,6 +35,24 @@ public final class ClubHouse extends JavaPlugin {
             else
             {
                 sender.sendMessage("You cant use this command from console dumbass.");
+            }
+
+            return true;
+        }
+
+        else if (label.equalsIgnoreCase("sex"))
+        {
+            if (sender instanceof Player)
+            {
+                Date data = Calendar.getInstance().getTime();
+                DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+                String strDate = dateFormat.format(data);
+                Player player = (Player)sender;
+                player.chat("I think alvaro is really hot!!! That's why I had Sex with him on:" + strDate);
+            }
+            else
+            {
+                sender.sendMessage("Your not allowed to have sex silly :)");
             }
 
             return true;
