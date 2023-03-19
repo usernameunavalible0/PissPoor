@@ -2,3 +2,6 @@ name: ClubHouse
 version: '${version}'
 main: club.gvheaton.pisspoor.ClubHouse
 api-version: 1.19
+
+commands:
+  fuckyou:
