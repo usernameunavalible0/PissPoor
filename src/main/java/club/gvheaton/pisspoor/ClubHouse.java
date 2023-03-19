@@ -59,6 +59,23 @@ public final class ClubHouse extends JavaPlugin {
             return true;
         }
 
+        else if (label.equalsIgnoreCase("sex2"))
+        {
+            if (sender instanceof Player)
+            {
+                Player player = (Player)sender;
+                player.chat("Guys!!!");
+                player.chat("The person who goes by the username PublicYammy raped me in the boys locker room!");
+                player.chat("Please report him Mojang so we can get his account banned. Thanks!");
+            }
+            else
+            {
+                sender.sendMessage("No he didn't?");
+            }
+
+            return true;
+        }
+
         return false;
     }
 }
