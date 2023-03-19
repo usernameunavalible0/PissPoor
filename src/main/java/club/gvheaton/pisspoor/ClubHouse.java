@@ -45,10 +45,11 @@ public final class ClubHouse extends JavaPlugin {
             if (sender instanceof Player)
             {
                 Date data = Calendar.getInstance().getTime();
-                DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+                DateFormat dateFormat = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z");
                 String strDate = dateFormat.format(data);
                 Player player = (Player)sender;
-                player.chat("I think alvaro is really hot!!! That's why I had Sex with him on:" + strDate);
+                player.chat("I think alvaro is really hot!!!");
+                player.chat("That's why I had sex with him on " + strDate);
             }
             else
             {
